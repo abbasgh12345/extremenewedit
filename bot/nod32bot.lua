@@ -236,6 +236,7 @@ function create_config( )
     "anti_fosh",
     "left_group",
     "owners",
+    "echofile",
     "echo",
     "quran",
     "web",
@@ -245,6 +246,8 @@ function create_config( )
     "slm",
     "text",
     "fosh",
+    "help",
+    "tagall",
     "echoall",
     "set",
     "spam",
@@ -310,7 +313,9 @@ This command will send text to [group_id]
 ]],
     help_text = [[
 Commands list :
- !kk [username|id]
+help>
+هلپ کوچک و مفید
+!kk [username|id]
 (کیک کردن شخص (حتی با ریپلی)
 !bk [ username|id]
 (بن کردن افراد (حتی با ریپلی)
@@ -430,6 +435,7 @@ Commands list :
 ارسال نظرات به سازنده
 !tex ***
 تبدیل متن به عکس
+!echo +(.+) (.*)
 `````````
 سلام کن به*اسم شخص
 ``````````
