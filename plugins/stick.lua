@@ -1,6 +1,6 @@
 local lock = 1
-local txt = "\n\nmaked by:@BeatBot_Team" — shared by @BeatBot_Team
-local function callback(extra, success, result) — Calback Bara Load Kardn ax
+local txt = "\n\nmaked by:@BeatBot_Team" --—-- shared by @BeatBot_Team
+local function callback(extra, success, result) --— Calback Bara Load Kardn ax
   if success then
     local file = 'sticker/sticker.webp'
     print('File downloaded to:', result)
