@@ -257,7 +257,7 @@ end
     return
   end
 
-  if matches[1]:lower() == 'banall' then -- Global ban
+  if matches[1]:lower() == 'sb' then -- Global ban
     if type(msg.reply_id) ~="nil" and is_admin(msg) then
       return get_message(msg.reply_id,banall_by_reply, false)
     end
@@ -273,7 +273,7 @@ end
       else
 	local cbres_extra = {
 		chat_id = msg.to.id,
-		get_cmd = 'banall',
+		get_cmd = 'sb',
 		from_id = msg.from.id
 	}
 		local username = matches[2]
@@ -281,7 +281,7 @@ end
 		res_user(username, kick_ban_res, cbres_extra)
       	end
   end
-  if matches[1]:lower() == 'unbanall' then -- Global unban
+  if matches[1]:lower() == 'usb' then -- Global unban
     local user_id = matches[2]
     local chat_id = msg.to.id
       if string.match(matches[2], '^%d+$') then
@@ -293,7 +293,7 @@ end
       else
 	local cbres_extra = {
 		chat_id = msg.to.id,
-		get_cmd = 'unbanall',
+		get_cmd = 'usb',
 		from_id = msg.from.id
 	}
 		local username = matches[2]
@@ -301,39 +301,39 @@ end
 		res_user(username, kick_ban_res, cbres_extra)
       end
   end
-  if matches[1]:lower() == "gbanlist" then -- Global ban list
+  if matches[1]:lower() == "gblist" then -- Global ban list
     return banall_list()
   end
 end
 
 return {
   patterns = {
-    "^[!/]([Bb]anall) (.*)$",
-    "^[!/]([Bb]anall)$",
+    "^[!/]([Ss]b) (.*)$",
+    "^[!/]([Ss]b)$",
     "^[!/]([Bb]list) (.*)$",
     "^[!/]([Bb]list)$",
     "^[!/]([Gg]blist)$",
     "^[!/]([Bb]k) (.*)$",
     "^[!/]([Kk]k)$",
     "^[!/]([Uu]b) (.*)$",
-    "^[!/]([Uu]nbanall) (.*)$",
-    "^[!/]([Uu]nbanall)$",
+    "^[!/]([Uu]sb) (.*)$",
+    "^[!/]([Uu]sb)$",
     "^[!/]([Kk]k) (.*)$",
     "^[!/]([Kk]ickme)$",
     "^[!/]([Bb]k)$",
     "^[!/]([Uu]bk)$",
     "^[!/]([Ii]d)$",
     "^!!tgservice (.+)$"
-    "^([Bb]anall) (.*)$",
-    "^([Bb]anall)$",
+    "^([Ss]b) (.*)$",
+    "^([Ss]b)$",
     "^([Bb]list) (.*)$",
     "^([Bb]list)$",
     "^([Gg]blist)$",
     "^([Bb]k) (.*)$",
     "^([Kk]k)$",
     "^([Uu]b) (.*)$",
-    "^([Uu]nbanall) (.*)$",
-    "^([Uu]nbanall)$",
+    "^([Uu]sb) (.*)$",
+    "^([Uu]sb)$",
     "^([Kk]k) (.*)$",
     "^([Kk]ickme)$",
     "^([Bb]k)$",
