@@ -1,4 +1,3 @@
-ارشیو, [22.02.16 22:27]
 do
 
  function run(msg, matches)
